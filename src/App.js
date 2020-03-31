@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {Posts} from "./components/Posts";
+import {AddPostForm} from "./components/AddPostForm";
 
 const App = () => (
     <div className="App">
@@ -15,6 +16,8 @@ const App = () => (
             >Learn React
             </a>
         </header>
+        <AddPostForm/>
+        <hr/>
         <Posts/>
     </div>
 );
