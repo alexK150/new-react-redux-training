@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a02dd20-c52f-4f14-a6e0-7e621bb0c891" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/AddPostForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PostItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/post.actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/post.types.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/reducers/post.reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/root-reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts.js" afterDir="false" />
     </list>
@@ -43,6 +47,11 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\FRONT-END\JS\REACT\PROJECTS\new-react-redux-training\src\redux" />
+    </key>
+  </component>
   <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
@@ -68,7 +77,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585647532575</updated>
-      <workItem from="1585647534441" duration="6133000" />
+      <workItem from="1585647534441" duration="12863000" />
+      <workItem from="1585676125443" duration="265000" />
     </task>
     <task id="LOCAL-00001" summary="commit v1">
       <created>1585648993537</created>
@@ -84,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585650106823</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="commit v3 Refactor: created PostItem presentational component. App updated with fetching data and sending new post on server">
+      <created>1585655183315</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1585655183315</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,20 +110,37 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit v1" />
     <MESSAGE value="commit v2 Posts component with fetching data done" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit v2 Posts component with fetching data done" />
+    <MESSAGE value="commit v3 Refactor: created PostItem presentational component. App updated with fetching data and sending new post on server" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit v3 Refactor: created PostItem presentational component. App updated with fetching data and sending new post on server" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="300" y="0" key="CommitChangelistDialog2" timestamp="1585650104902">
+    <state x="300" y="0" key="CommitChangelistDialog2" timestamp="1585655181457">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="300" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585650104902" />
+    <state x="300" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585655181457" />
     <state x="521" y="257" key="Github.ShareDialog" timestamp="1585649008738">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="521" y="257" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1585649008738" />
-    <state x="275" y="85" key="Vcs.Push.Dialog.v2" timestamp="1585650107933">
+    <state width="1024" height="245" key="GridCell.Tab.0.bottom" timestamp="1585676550735">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="85" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1585650107933" />
+    <state width="1024" height="245" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585676550735" />
+    <state width="1024" height="245" key="GridCell.Tab.0.center" timestamp="1585676550734">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1024" height="245" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585676550734" />
+    <state width="1024" height="245" key="GridCell.Tab.0.left" timestamp="1585676550734">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1024" height="245" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585676550734" />
+    <state width="1024" height="245" key="GridCell.Tab.0.right" timestamp="1585676550734">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1024" height="245" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585676550734" />
+    <state x="275" y="85" key="Vcs.Push.Dialog.v2" timestamp="1585655184633">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="85" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1585655184633" />
   </component>
 </project>

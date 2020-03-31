@@ -1,25 +1,26 @@
-import React, {useState, useEffect} from "react";
-import axios from 'axios';
+import React, { useEffect } from "react";
+import {connect} from 'react-redux';
 
 import {PostItem} from "./PostItem";
+import {fetchPosts} from "../redux/post.actions";
 
-export const Posts = () => {
-    let [posts, setPosts] = useState([]);
-
+const Posts = (props) => {
+    console.log(props.posts);
     useEffect(() => {
-        axios.get('https://jsonplaceholder.typicode.com/posts')
-            .then(response => {
-                const data = response.data;
-                setPosts(data)
-            })
-            .catch(error => {
-                console.log(error.message)});
+        props.fetchPosts();
     }, []);
 
     return (
         <div className='posts'>
             <h2>Posts</h2>
-            {posts.map(p => <PostItem id={p.id} title={p.title} body={p.body}/>)}
+
+            {props.posts.map(p => <PostItem key={p.id} id={p.id} title={p.title} body={p.body}/>)}
         </div>
     )
 };
+
+const mapStateToProps = state => ({
+    posts: state.posts.items
+});
+
+export default connect(mapStateToProps, { fetchPosts })(Posts);
