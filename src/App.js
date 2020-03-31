@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {Posts} from "./components/Posts";
 
 const App = () => (
     <div className="App">
@@ -14,6 +15,7 @@ const App = () => (
             >Learn React
             </a>
         </header>
+        <Posts/>
     </div>
 );
 
